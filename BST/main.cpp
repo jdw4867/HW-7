@@ -25,15 +25,17 @@ int main() {
     inFile.open("test.txt");
 
     BST_312<string> bst;
-   
+
     string s;
     inFile >> s;
-    while (inFile) {;
+    while (inFile) {
         cout << "inserting ... " << s << endl;
-        bst.insertItem(s);
+       // bst.insertItem(s);
         inFile >> s;
     }
-
+    cout << bst.countNodes() << " nodes" << endl;
+}
+/*
     cout << "postorder traversal is " << endl;
     print(bst.postOrderTraversal());
     cout << endl;
@@ -57,3 +59,4 @@ int main() {
 
 }
 
+*/
