@@ -24,18 +24,18 @@ int main() {
     ifstream inFile;
     inFile.open("test.txt");
 
-    BST_312<string> bst;
+    BST_312<int> bst;
 
-    string s;
+    int s;
     inFile >> s;
     while (inFile) {
         cout << "inserting ... " << s << endl;
-       // bst.insertItem(s);
+        bst.insertItem(s);
         inFile >> s;
     }
-    cout << bst.countNodes() << " nodes" << endl;
-}
-/*
+    cout << bst.countNodes() << " nodes" << endl << endl;
+
+
     cout << "postorder traversal is " << endl;
     print(bst.postOrderTraversal());
     cout << endl;
@@ -47,16 +47,23 @@ int main() {
     cout << "inorder traversal is " << endl;
     print(bst.inOrderTraversal());
     cout << endl;
-
+    int y = 0;
+    /*
     cout << "Remove items " << endl;
     cout << "number of nodes in tree before delete is " << bst.countNodes() << endl;
     s = "tree";
     bst.deleteItem(s);
-    print(bst.postOrderTraversal());
+    print(bst.preOrderTraversal());
     cout << endl;
     cout << "number of nodes in tree after delete is " << bst.countNodes() << endl;
     cout << endl;
 
+    print(bst.preOrderTraversal());
+    cout << endl;
+
+    string x = "This";
+    if(bst.isItemInTree(x)) cout << x << " is in the BST" << endl;
+    else cout << x << " is not in the BST" << endl;
+    */
 }
 
-*/
